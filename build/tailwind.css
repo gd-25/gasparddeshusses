@@ -617,9 +617,9 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .container {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 }
 
@@ -687,6 +687,14 @@ video {
 
 .h-16 {
   height: 4rem;
+}
+
+.h-40 {
+  height: 10rem;
+}
+
+.h-80 {
+  height: 20rem;
 }
 
 .h-screen {
@@ -760,10 +768,6 @@ video {
   width: 20rem;
 }
 
-.w-104 {
-  width: 26rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -775,7 +779,7 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
 
   .lg\:flex {
     display: flex;
