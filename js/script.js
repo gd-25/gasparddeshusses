@@ -176,7 +176,7 @@ function resize() {
 else {
 
   /* 100vh doesn't work on mobiles */
-  function correctHeight() {
+  window.onload = function correctHeight() {
     var fullHeightMobile = window.innerHeight ;
 
     document.getElementById("loadermobile").style.height = fullHeightMobile + "px" ;
