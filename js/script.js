@@ -120,7 +120,7 @@ if (windowwidth > breakpoint) {
   function changeCollage(norm, randomnumber) {
     z = z + norm;
 
-    if (z > 7) {
+    if (z > 5) {
       z = 0;
       chooseCollage(randomnumber)
       resize()
