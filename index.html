@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <title>GASPARD DESHUSSES</title>
+    <meta name="title" content="GASPARD DESHUSSES">
+    <meta name="description" content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="build/tailwind.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!--Facebook referencing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gasparddeshusses.com/">
+    <meta property="og:title" content="GASPARDDESHUSSES">
+    <meta property="og:description" content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
+    <meta property="og:image" content="https://gasparddeshusses.com/images/social.png">
+    <meta property="og:url" content="https://gasparddeshusses.com/index.html">
+
+    <!-- Twitter referencing -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gasparddeshusses.com/">
+    <meta property="twitter:title" content="GASPARDDESHUSSES">
+    <meta property="twitter:description" content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
+    <meta property="twitter:image" content="https://gasparddeshusses.com/images/social.png">
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="font-sans">
+
+    <!----------------- BIG SCREENS VERSION ----------------->
+    <div id="container" class="hidden lg:flex flex-col justify-center items-center">
+
+        <div id="loader" class="w-full h-screen flex flex-col justify-center items-center">
+            <img src="svg/monogrammeanimated.svg" alt="some image" style="height:19vh;">
+        </div>
+
+        <div id="collagescontainer" class="flex flex-col justify-center items-center h-screen w-full"
+            style="display: none;">
+
+            <div id="myCollageContainer" class="flex flex-col justify-center items-center h-screen w-full"
+                onmousemove="getCoordinates(event)">
+                <img id="myCollage" src="svg/monogramme.svg"
+                    style="height: 500px; max-height: 65vh; max-width:75vw; padding: 23vh 0 23vh 0; "
+                    class="object-contain" alt="some image">
+            </div>
+
+            <div id="myInfo" class="w-full h-screen flex flex-col justify-center items-center" style="display:none;">
+                <div id="myBio" class="w-full h-screen flex flex-col justify-center items-center">
+                    <div class="flex flex-col justify-center items-center"
+                        style="width: 678px; font-size:0.91rem; line-height: 1.3;">
+                        <p class="text-justify" style="column-count: 3; column-gap:37px; ">Born in March 1991, Gaspard
+                            Deshusses is an independant French artist and graphic designer who likes to shred fashion
+                            magazines.<br><br>
+                            Probably nothing makes him feel more electrified than tearing up a blood red scrap of paper
+                            off of a glossy page. Having been raised between the city and the mountains, he then lived
+                            in New York City, Paris and the French Alps for several years. Gaspard was constantly
+                            surrounded around graphic lines. The wild and brutal lines of ridges and peaks, in contrast
+                            to the neat and geometric lines of buildings and avenues made him who he is. Now, with
+                            stolen ripped off shapes and colors, he aims to create wild and sensual moods through
+                            methodic and structured compositions. This orderly chaos that Gaspard designs, is his chosen
+                            way to illustrate a paradox between a form of contrast, of confrontation– and eventually, an
+                            inevitable form of harmony and coexistence.<br><br>
+                            Dazzled by the techniques and aesthetics of abstract expressionism, Gaspard has been
+                            particularly influenced by the work of artists Nicolas de Staël and Jean-Michel Basquiat.
+                            His process as well as the collages that he creates are fundamentally experimental, which is
+                            the reason why most them are named with numbers instead of actual titles– this helps him
+                            focus on a kind of obsessive, endless visual research, through a consistent and profuse
+                            production.<br><br>
+                            This website showcased his artworks randomly and not chronologically. You can keep up with
+                            his latest work on his personal Instagram account.</p>
+
+                        <div class="h-10"></div>
+
+                        <h2>EDUCATION</h2>
+                        <h3>2014 / 2016 – MFA Visual Communication - Creapole ESDI, Paris, France</h3>
+                        <h3>2011 / 2014 – BFA Visual Communication - Creapole ESDI, Paris, France</h3>
+
+                        <div class="h-4"></div>
+
+                        <h2>CONTRIBUTION</h2>
+                        <h3>July 2016 – showing of ten framed collages for a collective exhibition in Bozel, France</h3>
+                        <h3>April 2020 – upcoming project for WWD magazine, digital publication worldwide</h3>
+
+                        <div class="h-10"></div>
+
+                        <div class="flex flex-row justify-center items-center">
+                            <a href="https://www.instagram.com/ga5parov/"><img src="logos/ig.png"
+                                    alt="instagram profile" class="h-6 px-1"></a>
+                            <a href="https://www.facebook.com/ga5parov"><img src="logos/fb.png" alt="instagram profile"
+                                    class="h-6 px-1"></a>
+                            <a href="https://www.linkedin.com/in/gasparddeshusses/"><img src="logos/li.png"
+                                    alt="linkedin profile" class="h-6 px-1"></a>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div id="myCollageInfo" class="h-screen w-full flex flex-col justify-center items-center"
+                    style="display:none;" onmousemove="getCoordinates(event)">
+                    <h1 class="parent w-104 flex flex-col justify-center items-center whitespace-no-wrap">
+                        <span href="#" id="line1" style="height:70px; line-height: 0.85;"
+                            class="resize inline-flex items-end "></span>
+                        <span href="#" id="line2" style="height:70px;"
+                            class="resize inline-flex items-center leading-none "></span>
+                        <span href="#" id="line3" style="height:70px; line-height: 0.85;"
+                            class="resize inline-flex items-start leading-none "></span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!----------------- SMALL SCREENS VERSION ----------------->
+    <div id="containermobile" class="lg:hidden flex flex-col justify-center items-center">
+
+        <div id="loadermobile" class="w-full flex justify-center items-center" style="height: 100vh;">
+            <img class="w-28" src="svg/monogrammeanimated.svg" alt="some image">
+        </div>
+
+        <div id="logomobile" class="w-full flex justify-center items-center" onclick="switchIntroMobile() ;"
+            style="height:100vh; display:none;">
+            <img class="w-28" src="svg/monogramme.svg" alt="some image">
+        </div>
+
+        <div id="biomobile" class="px-6 py-8 flex flex-col justify-center items-center text-lg"
+            style="display: none; line-height: 1.3;" onclick="switchIntroMobile() ;">
+            <p class="text-justify ">Born in March 1991, Gaspard Deshusses is an independant French artist and graphic
+                designer who likes to shred fashion magazines.<br><br>
+                Probably nothing makes him feel more electrified than tearing up a blood red scrap of paper off of a
+                glossy page. Having been raised between the city and the mountains, he then lived in New York City,
+                Paris and the French Alps for several years. Gaspard was constantly surrounded around graphic lines. The
+                wild and brutal lines of ridges and peaks, in contrast to the neat and geometric lines of buildings and
+                avenues made him who he is. Now, with stolen ripped off shapes and colors, he aims to create wild and
+                sensual moods through methodic and structured compositions. This orderly chaos that Gaspard designs, is
+                his chosen way to illustrate a paradox between a form of contrast, of confrontation– and eventually, an
+                inevitable form of harmony and coexistence.<br><br>
+                Dazzled by the techniques and aesthetics of abstract expressionism, Gaspard has been particularly
+                influenced by the work of artists Nicolas de Staël and Jean-Michel Basquiat.
+                His process as well as the collages that he creates are fundamentally experimental, which is the reason
+                why most them are named with numbers instead of actual titles– this helps him focus on a kind of
+                obsessive, endless visual research, through a consistent and profuse production.<br><br>
+                This website showcased his artworks randomly and not chronologically. You can keep up with his latest
+                work on his personal Instagram account.
+            </p>
+
+            <div class="h-16"></div>
+            <h2>EDUCATION</h2>
+            <div class="h-4"></div>
+            <ul class="text-center">
+                <li>2014 / 2016</li>
+                <li>MFA Visual Communication</li>
+                <li>Creapole ESDI, Paris, France</li>
+            </ul>
+            <div class="h-4"></div>
+            <ul class="text-center">
+                <li>2011 / 2014</li>
+                <li>BFA Visual Communication</li>
+                <li>Creapole ESDI, Paris, France</li>
+            </ul>
+
+
+            <div class="h-16"></div>
+            <h2>CONTRIBUTION</h2>
+            <div class="h-4"></div>
+            <ul class="text-center">
+                <li>July 2016</li>
+                <li>showing of ten framed collages for a collective exhibition in Bozel, France</li>
+            </ul>
+            <div class="h-4"></div>
+            <ul class="text-center">
+                <li>April 2020</li>
+                <li>upcoming project for WWD magazine, digital publication worldwide</li>
+            </ul>
+
+            <div class="h-16"></div>
+            <div class="flex flex-row justify-center items-center">
+                <a href="https://www.instagram.com/ga5parov/"><img src="logos/ig.png" alt="instagram profile"
+                        class="h-12 px-3"></a>
+                <a href="https://www.facebook.com/ga5parov"><img src="logos/fb.png" alt="instagram profile"
+                        class="h-12 px-3"></a>
+                <a href="https://www.linkedin.com/in/gasparddeshusses/"><img src="logos/li.png" alt="linkedin profile"
+                        class="h-12 px-3"></a>
+            </div>
+        </div>
+
+
+        <div id="collagescontainermobile" class="lg:hidden w-full sm:w-3/4 flex flex-col justify-center items-center"
+            style="display: none;">
+
+            <script>
+                var container = document.getElementById('collagescontainermobile');
+
+                /* create a random array the length of the data file */
+                var depart = [];
+                for (var i = 0; i <= data.length - 1; i++) {
+                    depart.push(i);
+                }
+                var aleatoire = shuffle(depart);
+
+                /* create all the divs dynamically */
+                for (var i = 0; i < data.length; i++) {
+                    var j = aleatoire[i];
+
+                    var img = document.createElement('img');
+                    img.setAttribute("onclick", "switchStateMobile(" + j + "); resize();");
+                    img.className = "my-12 px-4 object-contain";
+                    img.id = "collage" + j;
+                    img.src = "light/" + data[j].src;
+                    container.appendChild(img);
+
+                    var newInfo = document.createElement("div");
+                    newInfo.setAttribute("onclick", "switchStateMobile(" + j + "); resize();");
+                    newInfo.style.display = "none";
+                    newInfo.id = "newInfo" + j;
+                    newInfo.className = "w-full my-12 flex flex-col justify-center items-center";
+                    container.appendChild(newInfo);
+
+                    var newCollageInfo = document.createElement("div");
+                    newCollageInfo.id = "newCollageInfo" + j;
+                    newCollageInfo.className = "flex flex-col justify-center items-center";
+                    newInfo.appendChild(newCollageInfo);
+
+                    var newBlock = document.createElement("div");
+                    newBlock.id = "newBlock" + j;
+                    newBlock.className = "parent w-80 flex flex-col justify-center items-center whitespace-no-wrap";
+                    newCollageInfo.appendChild(newBlock);
+
+                    var line1 = document.createElement("h1");
+                    line1.id = "line1" + "of" + j;
+                    line1.style.height = "60px";
+                    line1.style.lineHeight = "0.85";
+                    line1.className = "inline-flex items-end";
+                    line1.innerHTML = data[j].title;
+                    newBlock.appendChild(line1);
+
+                    var line2 = document.createElement("h1");
+                    line2.id = "line2" + "of" + j;
+                    line2.style.height = "60px";
+                    line2.className = "inline-flex items-center leading-none";
+                    line2.innerHTML = data[j].year + ", " + data[j].type + ", " + data[j].place;
+                    newBlock.appendChild(line2);
+
+                    var line3 = document.createElement("h1");
+                    line3.id = "line3" + "of" + j;
+                    line3.style.height = "60px";
+                    line3.style.lineHeight = "0.85";
+                    line3.className = "inline-flex items-start";
+                    line3.innerHTML = data[j].dimensions;
+                    newBlock.appendChild(line3);
+                }
+            </script>
+
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>
