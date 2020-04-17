@@ -1,5 +1,5 @@
 /* Variables to load scripts only when needed */
-var breakpoint = 1024;
+var breakpoint = 1100;
 var windowwidth = window.innerWidth;
 
 
@@ -103,10 +103,7 @@ if (windowwidth > breakpoint) {
 
   /* Get the coordinates and calculate z */
   function getCoordinates(e) {
-    var numerobis = document.getElementById("myBio").style.display;
-
-
-      var x = e.clientX;
+    var x = e.clientX;
     var y = e.clientY;
     var norm = Math.floor((x + y + 1) / (x + y));
     var randomNum = Math.floor(Math.random() * data.length);
@@ -130,7 +127,7 @@ if (windowwidth > breakpoint) {
   /* Resize the text block so it fits a container */
 function resize() {
   $('.resize').each(function (i, obj) {
-    $(this).css('font-size', '6em');
+    $(this).css('font-size', '8em');
 
     while ($(this).width() > $(this).parent().width()) {
       $(this).css('font-size', (parseInt($(this).css('font-size')) - 1) + "px");
@@ -144,6 +141,7 @@ function resize() {
     document.getElementById("myCollage").style.padding = "0";
     document.getElementById("myCollage").src = data[number].src;
     document.getElementById("myBio").style.display = "none";
+    document.getElementById("social").style.display = "none";
     document.getElementById("myCollageInfo").style.display = "flex";
     document.getElementById("line1").innerHTML = data[number].title;
     document.getElementById("line2").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
@@ -182,7 +180,6 @@ else {
     document.getElementById("loadermobile").style.height = fullHeightMobile + "px" ;
     document.getElementById("logomobile").style.height = fullHeightMobile + "px" ;
 
-    addEventListener('resize', correctHeight)
     addEventListener('orientationchange', correctHeight)
   }
 
@@ -190,9 +187,10 @@ else {
   /* Display loader until page ready */
   window.addEventListener("load", function(){
     setTimeout(() => {
-      document.querySelector("#loadermobile").style.display = "none";
-      document.querySelector("#logomobile").style.display = "flex";
-      document.querySelector("#collagescontainermobile").style.display = "flex";
+      document.getElementById("loadermobile").style.display = "none";
+      document.getElementById("logomobile").style.display = "flex";
+      document.getElementById("collagescontainermobile").style.display = "flex";
+      document.getElementById("endsocial").style.display = "flex";
       
     }, 3000);
   });
