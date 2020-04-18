@@ -166,19 +166,6 @@ if (windowwidth > breakpoint) {
 /* ------------------------ SCRIPT TO RUN ON SMALL SCREENS ONLY ------------------------ */
 else {
 
-  /* 100vh doesn't work on mobiles */
-  window.onload = function correctHeight() {
-    var fullHeightMobile = window.innerHeight;
-
-    document.getElementById("loadermobile").style.height = fullHeightMobile + "px";
-    document.getElementById("logomobile").style.height = fullHeightMobile + "px";
-
-    document.getElementById("loaderimage").src = "svg/monogrammeanimated.svg";
-    document.getElementById("logoimage").src = "svg/monogramme.svg";
-
-    addEventListener('orientationchange', correctHeight)
-  }
-
 
   /* Display loader until page ready */
   window.addEventListener("load", function () {

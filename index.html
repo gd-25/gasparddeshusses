@@ -26,48 +26,63 @@
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://gasparddeshusses.com/">
     <meta property="twitter:title" content="GASPARDDESHUSSES">
-    <meta property="twitter:description" content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
+    <meta property="twitter:description"
+        content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
     <meta property="twitter:image" content="https://gasparddeshusses.com/images/social.png">
 
     <!-- Javascript -->
+    <script>
+        var breakpoint = 1100;
+        var windowwidth = window.innerWidth;
+
+        if (windowwidth < breakpoint) {
+            /* 100vh doesn't work on mobiles */
+            window.onload = function correctHeight() {
+                var fullHeightMobile = window.innerHeight;
+                document.getElementById("loadermobile").style.height = fullHeightMobile + "px";
+                document.getElementById("loaderimage").src = "svg/monogrammeanimated.svg";
+                document.getElementById("logomobile").style.height = fullHeightMobile + "px";
+                addEventListener('orientationchange', correctHeight)
+            }
+        }
+    </script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-</head>
-
-<body class="font-sans">
-
-    <!----------------- BIG SCREENS VERSION ----------------->
-    <div id="container" class="hidden lg:flex flex-col justify-center items-center">
-
-        <div id="loader" class="w-full h-screen flex flex-col justify-center items-center">
-            <img src="svg/monogrammeanimated.svg" alt="some image" style="height:19vh;">
-        </div>
-
-        <div id="collagescontainer" class="flex flex-col justify-center items-center h-screen w-full"
-            style="display: none;">
-
-            <div id="myCollageContainer" class="flex flex-col justify-center items-center h-screen w-full"
-                onmousemove="getCoordinates(event)">
-                <img id="myCollage" src="svg/monogramme.svg"
-                    style="height: 500px; max-height: 65vh; max-width:75vw; padding: 23vh 0 23vh 0; "
-                    class="object-contain" alt="some image">
+    
+    </head>
+    
+    <body class="font-sans">
+    
+        <!----------------- BIG SCREENS VERSION ----------------->
+        <div id="container" class="hidden lg:flex flex-col justify-center items-center">
+    
+            <div id="loader" class="w-full h-screen flex flex-col justify-center items-center">
+                <img src="svg/monogrammeanimated.svg" alt="some image" style="height:19vh;">
             </div>
-
-            <div id="myInfo" class="w-full h-screen flex flex-col justify-center items-center" style="display:none;">
-                <div id="myBio" class="w-full h-screen flex flex-col justify-center items-center">
-                    <div class="flex flex-col justify-center items-center"
-                        style="width: 678px; font-size:0.91rem; line-height: 1.3;">
-                        <p class="text-justify" style="column-count: 3; column-gap:37px; ">Born in March 1991, Gaspard
-                            Deshusses is an independant French artist and graphic designer who likes to shred fashion
-                            magazines.<br><br>
-                            Probably nothing makes him feel more electrified than tearing up a blood red scrap of paper
-                            off of a glossy page. Having been raised between the city and the mountains, he then lived
-                            in New York City, Paris and the French Alps for several years. Gaspard was constantly
-                            surrounded around graphic lines. The wild and brutal lines of ridges and peaks, in contrast
-                            to the neat and geometric lines of buildings and avenues made him who he is. Now, with
+    
+            <div id="collagescontainer" class="flex flex-col justify-center items-center h-screen w-full"
+                style="display: none;">
+    
+                <div id="myCollageContainer" class="flex flex-col justify-center items-center h-screen w-full"
+                    onmousemove="getCoordinates(event)">
+                    <img id="myCollage" src="svg/monogramme.svg"
+                        style="height: 500px; max-height: 65vh; max-width:75vw; padding: 23vh 0 23vh 0; "
+                        class="object-contain" alt="some image">
+                </div>
+    
+                <div id="myInfo" class="w-full h-screen flex flex-col justify-center items-center" style="display:none;">
+                    <div id="myBio" class="w-full h-screen flex flex-col justify-center items-center">
+                        <div class="flex flex-col justify-center items-center"
+                            style="width: 678px; font-size:0.91rem; line-height: 1.3;">
+                            <p class="text-justify" style="column-count: 3; column-gap:37px; ">Born in March 1991, Gaspard
+                                Deshusses is an independant French artist and graphic designer who likes to shred fashion
+                                magazines.<br><br>
+                                Probably nothing makes him feel more electrified than tearing up a blood red scrap of paper
+                                off of a glossy page. Having been raised between the city and the mountains, he then lived
+                                in New York City, Paris and the French Alps for several years. Gaspard was constantly
+                                surrounded around graphic lines. The wild and brutal lines of ridges and peaks, in contrast               to the neat and geometric lines of buildings and avenues made him who he is. Now, with
                             stolen ripped off shapes and colors, he aims to create wild and sensual moods through
                             methodic and structured compositions. This orderly chaos that Gaspard designs, is his chosen
                             way to illustrate a paradox between a form of contrast, of confrontation– and eventually, an
@@ -135,7 +150,7 @@
 
         <div id="logomobile" class="w-full flex justify-center items-center" onclick="switchIntroMobile() ;"
             style="height:100vh; display:none;">
-            <img id="logoimage" class="w-28" src="svg/whitespacer.png" alt="some image">
+            <img id="logoimage" class="w-28" src="svg/monogramme.svg" alt="some image">
         </div>
 
         <div id="biomobile" class="px-6 py-8 flex flex-col justify-center items-center text-lg"
