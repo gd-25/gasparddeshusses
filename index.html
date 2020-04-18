@@ -29,9 +29,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gasparddeshusses.com/">
     <meta property="og:title" content="GASPARDDESHUSSES">
-    <meta property="og:description"
-        content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
-    <meta property="og:image" content="https://gasparddeshusses.com/images/social.png">
+    <meta property="og:description" content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
+    <meta property="og:image" content="https://gasparddeshusses.com/social.jpg">
     <meta property="og:url" content="https://gasparddeshusses.com/index.html">
 
     <!-- Twitter referencing -->
@@ -40,7 +39,7 @@
     <meta property="twitter:title" content="GASPARDDESHUSSES">
     <meta property="twitter:description"
         content="Gaspard Deshusses is an independant French artist and graphic designer who likes to shred fashion magazines.">
-    <meta property="twitter:image" content="https://gasparddeshusses.com/images/social.png">
+    <meta property="twitter:image" content="https://gasparddeshusses.com/social.jpg">
 
     <!-- Javascript -->
     <script>
@@ -52,7 +51,7 @@
             window.onload = function correctHeight() {
                 var fullHeightMobile = window.innerHeight;
                 document.getElementById("loadermobile").style.height = fullHeightMobile + "px";
-                document.getElementById("loaderimage").src = "svg/monogrammeanimated.svg";
+                document.getElementById("loaderimage").src = "svg/chainsawanimated.svg";
                 document.getElementById("logomobile").style.height = fullHeightMobile + "px";
                 addEventListener('orientationchange', correctHeight)
             }
@@ -71,7 +70,7 @@
     <div id="container" class="hidden lg:flex flex-col justify-center items-center">
 
         <div id="loader" class="w-full h-screen flex flex-col justify-center items-center">
-            <img src="svg/monogrammeanimated.svg" alt="some image" style="height:19vh;">
+            <img src="svg/chainsawanimated.svg" alt="some image" style="height:19vh;">
         </div>
 
         <div id="collagescontainer" class="flex flex-col justify-center items-center h-screen w-full"
@@ -160,7 +159,7 @@
     <div id="containermobile" class="lg:hidden flex flex-col justify-center items-center">
 
         <div id="loadermobile" class="w-full flex justify-center items-center" style="height: 100vh;">
-            <img id="loaderimage" class="w-28" src="svg/whitespacer.png" alt="some image">
+            <img id="loaderimage" class="w-40" src="svg/whitespacer.png" alt="some image">
         </div>
 
         <div id="logomobile" class="w-full flex justify-center items-center" onclick="switchIntroMobile() ;"
