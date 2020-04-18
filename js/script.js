@@ -12,7 +12,7 @@ if (windowwidth > breakpoint) {
   var z = 0;
 
   /* Display loader until page ready (with min 3s of display) */
-  window.addEventListener("load", function(){
+  window.addEventListener("load", function () {
     setTimeout(() => {
       document.querySelector("#loader").style.display = "none";
       document.querySelector("#collagescontainer").style.display = "flex";
@@ -107,10 +107,7 @@ if (windowwidth > breakpoint) {
     var y = e.clientY;
     var norm = Math.floor((x + y + 1) / (x + y));
     var randomNum = Math.floor(Math.random() * data.length);
-
     changeCollage(norm, randomNum)
-
-
   }
 
   /* Auto-increase z and change collage/info every z pixels */
@@ -125,16 +122,16 @@ if (windowwidth > breakpoint) {
   }
 
   /* Resize the text block so it fits a container */
-function resize() {
-  $('.resize').each(function (i, obj) {
-    $(this).css('font-size', '8em');
+  function resize() {
+    $('.resize').each(function (i, obj) {
+      $(this).css('font-size', '8em');
 
-    while ($(this).width() > $(this).parent().width()) {
-      $(this).css('font-size', (parseInt($(this).css('font-size')) - 1) + "px");
+      while ($(this).width() > $(this).parent().width()) {
+        $(this).css('font-size', (parseInt($(this).css('font-size')) - 1) + "px");
 
-    }
-  });
-}
+      }
+    });
+  }
 
   /* Choose the collage and the matching info based on the same random number */
   function chooseCollage(number) {
@@ -147,7 +144,6 @@ function resize() {
     document.getElementById("line2").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
     document.getElementById("line3").innerHTML = data[number].dimensions;
   }
-
 
 
   /* Move between the collage mode and the info mode */
@@ -163,10 +159,7 @@ function resize() {
       document.getElementById("myCollageContainer").style.display = "flex";
     }
   }
-
 }
-
-
 
 
 
@@ -175,48 +168,44 @@ else {
 
   /* 100vh doesn't work on mobiles */
   window.onload = function correctHeight() {
-    var fullHeightMobile = window.innerHeight ;
+    var fullHeightMobile = window.innerHeight;
 
-    document.getElementById("loadermobile").style.height = fullHeightMobile + "px" ;
-    document.getElementById("logomobile").style.height = fullHeightMobile + "px" ;
+    document.getElementById("loadermobile").style.height = fullHeightMobile + "px";
+    document.getElementById("logomobile").style.height = fullHeightMobile + "px";
+
+    document.getElementById("loaderimage").src = "svg/monogrammeanimated.svg";
+    document.getElementById("logoimage").src = "svg/monogramme.svg";
 
     addEventListener('orientationchange', correctHeight)
   }
 
 
   /* Display loader until page ready */
-  window.addEventListener("load", function(){
+  window.addEventListener("load", function () {
     setTimeout(() => {
       document.getElementById("loadermobile").style.display = "none";
       document.getElementById("logomobile").style.display = "flex";
       document.getElementById("collagescontainermobile").style.display = "flex";
       document.getElementById("endsocial").style.display = "flex";
-      
     }, 3000);
   });
 
-
+  /* Create a random array to display collages randomly */
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
     }
 
     return array;
-}
-
-
-
+  }
 
   /* Switch between collage mode and info mode on mobile */
   function switchStateMobile(number) {
@@ -245,16 +234,16 @@ else {
   }
 
   /* Resize the text block so it fits a container */
-function resize() {
-  $('.resize').each(function (i, obj) {
-    $(this).css('font-size', '4em');
+  function resize() {
+    $('.resize').each(function (i, obj) {
+      $(this).css('font-size', '4em');
 
-    while ($(this).width() > $(this).parent().width()) {
-      $(this).css('font-size', (parseInt($(this).css('font-size')) - 1) + "px");
+      while ($(this).width() > $(this).parent().width()) {
+        $(this).css('font-size', (parseInt($(this).css('font-size')) - 1) + "px");
 
-    }
-  });
-}
+      }
+    });
+  }
 
   /* Move between the logo and the bio */
   function switchIntroMobile() {
@@ -269,8 +258,6 @@ function resize() {
       document.getElementById("logomobile").style.display = "flex";
     }
   }
-
-
 
 };
 
