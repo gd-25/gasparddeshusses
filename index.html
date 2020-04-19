@@ -76,14 +76,14 @@
         <div id="collagescontainer" class="flex flex-col justify-center items-center h-screen w-full"
             style="display: none;">
 
-            <div id="myCollageContainer" class="flex flex-col justify-center items-center h-screen w-full"
-                onmousemove="getCoordinates(event)">
+            <div id="myCollageContainer" class="flex flex-col justify-center items-center h-screen w-full">
                 <img id="myCollage" src="svg/monogramme.svg"
-                    style="height: 500px; max-height: 65vh; max-width:75vw; padding: 23vh 0 23vh 0; "
-                    class="object-contain" alt="some image">
+                    style="height:19vh; max-height: 65vh; max-width:75vw;"
+                    class="object-contain" alt="some image" onmouseover="unlockDoor();">
+
             </div>
 
-            <div id="myInfo" class="w-full h-screen flex flex-col justify-center items-center" style="display:none;">
+            <div id="myInfo" class="w-full h-screen flex flex-col justify-center items-center" style="display:none;" onclick="switchMode(); resize();">
                 <div id="myBio" class="w-full h-screen flex flex-col justify-center items-center">
                     <div class="flex flex-col justify-center items-center"
                         style="width: 678px; font-size:0.91rem; line-height: 1.3;">
@@ -130,6 +130,8 @@
                                     alt="instagram profile" class="h-6 px-1"></a>
                             <a href="https://www.linkedin.com/in/gasparddeshusses/" target="_blank"><img
                                     src="logos/li.png" alt="linkedin profile" class="h-6 px-1"></a>
+                            <a href="mailto:greg.deshusses@gmail.com" target="_blank"><img
+                                src="logos/mail.png" alt="email" class="h-6 px-1"></a>
                         </div>
 
 
@@ -225,6 +227,9 @@
                         alt="instagram profile" class="h-12 px-3"></a>
                 <a href="https://www.linkedin.com/in/gasparddeshusses/" target="_blank"><img src="logos/li.png"
                         alt="linkedin profile" class="h-12 px-3"></a>
+                <a href="mailto:greg.deshusses@gmail.com" target="_blank"><img
+                            src="logos/mail.png" alt="email" class="h-12 px-3"></a>
+
             </div>
         </div>
 
@@ -306,6 +311,8 @@
                     class="h-12 px-3"></a>
             <a href="https://www.linkedin.com/in/gasparddeshusses/" target="_blank"><img src="logos/li.png"
                     alt="linkedin profile" class="h-12 px-3"></a>
+            <a href="mailto:greg.deshusses@gmail.com" target="_blank"><img
+                        src="logos/mail.png" alt="email" class="h-12 px-3"></a>
             <div class="h-80"></div>
         </div>
 

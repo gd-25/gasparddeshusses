@@ -9,16 +9,24 @@ var windowwidth = window.innerWidth;
 if (windowwidth > breakpoint) {
   var randomNum = 0;
   var norm = 1;
-  var z = 0;
+  var z = 5;
 
   /* Display loader until page ready (with min 3s of display) */
   window.addEventListener("load", function () {
     setTimeout(() => {
       document.querySelector("#loader").style.display = "none";
       document.querySelector("#collagescontainer").style.display = "flex";
-      document.querySelector("#container").setAttribute("onclick", "switchMode(); resize()");
     }, 3000);
   });
+
+  function unlockDoor() {
+    document.getElementById("myCollageContainer").setAttribute("onclick", "switchMode(); resize();");
+    document.getElementById("myCollage").setAttribute("onmouseout", "triggerCoord();");
+  }
+
+  function triggerCoord() {
+    document.querySelector("#myCollageContainer").setAttribute("onmousemove", "getCoordinates(event);"); 
+  }
 
   /* Preload all images so the website is fully functional */
   var images = new Array()
@@ -114,7 +122,7 @@ if (windowwidth > breakpoint) {
   function changeCollage(norm, randomnumber) {
     z = z + norm;
 
-    if (z > 5) {
+    if (z > 6) {
       z = 0;
       chooseCollage(randomnumber)
       resize()
@@ -135,7 +143,7 @@ if (windowwidth > breakpoint) {
 
   /* Choose the collage and the matching info based on the same random number */
   function chooseCollage(number) {
-    document.getElementById("myCollage").style.padding = "0";
+    document.getElementById("myCollage").style.height = "500px";
     document.getElementById("myCollage").src = data[number].src;
     document.getElementById("myBio").style.display = "none";
     document.getElementById("social").style.display = "none";
