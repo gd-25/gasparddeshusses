@@ -1,6 +1,7 @@
 var data = [{
   "id": 1,
   "src": "images/img-22.jpg",
+  "srcmobile": "images/img-22-m.jpg",
   "title": "UNTITLED 22",
   "year": "2015",
   "type": "collage",
@@ -10,6 +11,7 @@ var data = [{
 {
   "id": 2,
   "src": "images/img-23.jpg",
+  "srcmobile": "images/img-23-m.jpg",
   "title": "UNTITLED 23",
   "year": "2016",
   "type": "collage",
@@ -19,6 +21,7 @@ var data = [{
 {
   "id": 3,
   "src": "images/img-24.jpg",
+  "srcmobile": "images/img-24-m.jpg",
   "title": "UNTITLED 24",
   "year": "2015",
   "type": "collage",
@@ -28,6 +31,7 @@ var data = [{
 {
   "id": 4,
   "src": "images/img-25.jpg",
+  "srcmobile": "images/img-25-m.jpg",
   "title": "UNTITLED 25",
   "year": "2015",
   "type": "collage",
@@ -37,6 +41,7 @@ var data = [{
 {
   "id": 5,
   "src": "images/img-26.jpg",
+  "srcmobile": "images/img-26-m.jpg",
   "title": "UNTITLED 26",
   "year": "2015",
   "type": "collage",
@@ -46,6 +51,7 @@ var data = [{
 {
   "id": 6,
   "src": "images/img-27.jpg",
+  "srcmobile": "images/img-27-m.jpg",
   "title": "UNTITLED 27",
   "year": "2016",
   "type": "collage",
@@ -55,6 +61,7 @@ var data = [{
 {
   "id": 7,
   "src": "images/img-28.jpg",
+  "srcmobile": "images/img-28-m.jpg",
   "title": "UNTITLED 28",
   "year": "2015",
   "type": "collage",
@@ -64,6 +71,7 @@ var data = [{
 {
   "id": 8,
   "src": "images/img-29.jpg",
+  "srcmobile": "images/img-29-m.jpg",
   "title": "UNTITLED 29",
   "year": "2015",
   "type": "collage",
@@ -73,6 +81,7 @@ var data = [{
 {
   "id": 9,
   "src": "images/img-32.jpg",
+  "srcmobile": "images/img-32-m.jpg",
   "title": "UNTITLED 32",
   "year": "2015",
   "type": "collage",
@@ -82,6 +91,7 @@ var data = [{
 {
   "id": 10,
   "src": "images/img-48.jpg",
+  "srcmobile": "images/img-48-m.jpg",
   "title": "UNTITLED 48",
   "year": "2015",
   "type": "collage",
@@ -91,6 +101,7 @@ var data = [{
 {
   "id": 11,
   "src": "images/img-49.jpg",
+  "srcmobile": "images/img-49-m.jpg",
   "title": "UNTITLED 49",
   "year": "2016",
   "type": "collage",
@@ -100,6 +111,7 @@ var data = [{
 {
   "id": 12,
   "src": "images/img-50.jpg",
+  "srcmobile": "images/img-50-m.jpg",
   "title": "UNTITLED 50",
   "year": "2016",
   "type": "collage",
@@ -109,6 +121,7 @@ var data = [{
 {
   "id": 13,
   "src": "images/img-51.jpg",
+  "srcmobile": "images/img-51-m.jpg",
   "title": "UNTITLED 51",
   "year": "2016",
   "type": "collage",
@@ -118,6 +131,7 @@ var data = [{
 {
   "id": 14,
   "src": "images/img-52.jpg",
+  "srcmobile": "images/img-52-m.jpg",
   "title": "UNTITLED 52",
   "year": "2016",
   "type": "collage",
@@ -127,6 +141,7 @@ var data = [{
 {
   "id": 15,
   "src": "images/img-53.jpg",
+  "srcmobile": "images/img-53-m.jpg",
   "title": "UNTITLED 53",
   "year": "2016",
   "type": "collage",
@@ -136,6 +151,7 @@ var data = [{
 {
   "id": 16,
   "src": "images/img-54.jpg",
+  "srcmobile": "images/img-54-m.jpg",
   "title": "UNTITLED 54",
   "year": "2016",
   "type": "collage",
@@ -145,6 +161,7 @@ var data = [{
 {
   "id": 17,
   "src": "images/img-55.jpg",
+  "srcmobile": "images/img-55-m.jpg",
   "title": "UNTITLED 55",
   "year": "2016",
   "type": "collage",
@@ -154,6 +171,7 @@ var data = [{
 {
   "id": 18,
   "src": "images/img-56.jpg",
+  "srcmobile": "images/img-56-m.jpg",
   "title": "UNTITLED 56",
   "year": "2016",
   "type": "collage",
@@ -163,6 +181,7 @@ var data = [{
 {
   "id": 19,
   "src": "images/img-57.jpg",
+  "srcmobile": "images/img-57-m.jpg",
   "title": "UNTITLED 57",
   "year": "2016",
   "type": "collage",
@@ -172,6 +191,7 @@ var data = [{
 {
   "id": 20,
   "src": "images/img-58.jpg",
+  "srcmobile": "images/img-58-m.jpg",
   "title": "UNTITLED 58",
   "year": "2016",
   "type": "collage",
@@ -181,6 +201,7 @@ var data = [{
 {
   "id": 21,
   "src": "images/img-59.jpg",
+  "srcmobile": "images/img-59-m.jpg",
   "title": "UNTITLED 59",
   "year": "2016",
   "type": "collage",
@@ -190,6 +211,7 @@ var data = [{
 {
   "id": 22,
   "src": "images/img-60.jpg",
+  "srcmobile": "images/img-60-m.jpg",
   "title": "UNTITLED 60",
   "year": "2016",
   "type": "collage",
@@ -199,6 +221,7 @@ var data = [{
 {
   "id": 23,
   "src": "images/img-61.jpg",
+  "srcmobile": "images/img-61-m.jpg",
   "title": "UNTITLED 61",
   "year": "2016",
   "type": "collage",
@@ -208,6 +231,7 @@ var data = [{
 {
   "id": 24,
   "src": "images/img-62.jpg",
+  "srcmobile": "images/img-62-m.jpg",
   "title": "UNTITLED 62",
   "year": "2016",
   "type": "collage",
@@ -217,6 +241,7 @@ var data = [{
 {
   "id": 25,
   "src": "images/img-63.jpg",
+  "srcmobile": "images/img-63-m.jpg",
   "title": "UNTITLED 63",
   "year": "2016",
   "type": "collage",
@@ -226,6 +251,7 @@ var data = [{
 {
   "id": 26,
   "src": "images/img-64.jpg",
+  "srcmobile": "images/img-64-m.jpg",
   "title": "UNTITLED 64",
   "year": "2016",
   "type": "collage",
@@ -235,6 +261,7 @@ var data = [{
 {
   "id": 27,
   "src": "images/img-65.jpg",
+  "srcmobile": "images/img-65-m.jpg",
   "title": "UNTITLED 65",
   "year": "2016",
   "type": "collage",
@@ -244,6 +271,7 @@ var data = [{
 {
   "id": 28,
   "src": "images/img-67.jpg",
+  "srcmobile": "images/img-67-m.jpg",
   "title": "UNTITLED 67",
   "year": "2016",
   "type": "collage",
@@ -253,6 +281,7 @@ var data = [{
 {
   "id": 29,
   "src": "images/img-68.jpg",
+  "srcmobile": "images/img-68-m.jpg",
   "title": "UNTITLED 68",
   "year": "2016",
   "type": "collage",
@@ -262,6 +291,7 @@ var data = [{
 {
   "id": 30,
   "src": "images/img-69.jpg",
+  "srcmobile": "images/img-69-m.jpg",
   "title": "UNTITLED 69",
   "year": "2016",
   "type": "collage",
@@ -271,6 +301,7 @@ var data = [{
 {
   "id": 31,
   "src": "images/img-70.jpg",
+  "srcmobile": "images/img-70-m.jpg",
   "title": "UNTITLED 70",
   "year": "2016",
   "type": "collage",
@@ -280,6 +311,7 @@ var data = [{
 {
   "id": 32,
   "src": "images/img-71.jpg",
+  "srcmobile": "images/img-71-m.jpg",
   "title": "UNTITLED 71",
   "year": "2016",
   "type": "collage",
@@ -289,6 +321,7 @@ var data = [{
 {
   "id": 33,
   "src": "images/img-72.jpg",
+  "srcmobile": "images/img-72-m.jpg",
   "title": "UNTITLED 72",
   "year": "2016",
   "type": "collage",
@@ -298,6 +331,7 @@ var data = [{
 {
   "id": 34,
   "src": "images/img-73.jpg",
+  "srcmobile": "images/img-73-m.jpg",
   "title": "UNTITLED 73",
   "year": "2016",
   "type": "collage",
@@ -307,6 +341,7 @@ var data = [{
 {
   "id": 35,
   "src": "images/img-74.jpg",
+  "srcmobile": "images/img-74-m.jpg",
   "title": "UNTITLED 74",
   "year": "2016",
   "type": "collage",
@@ -316,6 +351,7 @@ var data = [{
 {
   "id": 36,
   "src": "images/img-75.jpg",
+  "srcmobile": "images/img-75-m.jpg",
   "title": "UNTITLED 75",
   "year": "2016",
   "type": "collage",
@@ -325,6 +361,7 @@ var data = [{
 {
   "id": 37,
   "src": "images/img-76.jpg",
+  "srcmobile": "images/img-76-m.jpg",
   "title": "UNTITLED 76",
   "year": "2016",
   "type": "collage",
@@ -334,6 +371,7 @@ var data = [{
 {
   "id": 38,
   "src": "images/img-77.jpg",
+  "srcmobile": "images/img-77-m.jpg",
   "title": "UNTITLED 77",
   "year": "2016",
   "type": "collage",
@@ -343,6 +381,7 @@ var data = [{
 {
   "id": 39,
   "src": "images/img-78.jpg",
+  "srcmobile": "images/img-78-m.jpg",
   "title": "UNTITLED 78",
   "year": "2016",
   "type": "collage",
@@ -352,6 +391,7 @@ var data = [{
 {
   "id": 40,
   "src": "images/img-79.jpg",
+  "srcmobile": "images/img-79-m.jpg",
   "title": "UNTITLED 79",
   "year": "2016",
   "type": "collage",
@@ -361,6 +401,7 @@ var data = [{
 {
   "id": 41,
   "src": "images/img-80.jpg",
+  "srcmobile": "images/img-80-m.jpg",
   "title": "UNTITLED 80",
   "year": "2016",
   "type": "collage",
@@ -370,6 +411,7 @@ var data = [{
 {
   "id": 42,
   "src": "images/img-81.jpg",
+  "srcmobile": "images/img-81-m.jpg",
   "title": "UNTITLED 81",
   "year": "2016",
   "type": "collage",
@@ -379,6 +421,7 @@ var data = [{
 {
   "id": 43,
   "src": "images/img-82.jpg",
+  "srcmobile": "images/img-82-m.jpg",
   "title": "UNTITLED 82",
   "year": "2016",
   "type": "collage",
@@ -388,6 +431,7 @@ var data = [{
 {
   "id": 44,
   "src": "images/img-83.jpg",
+  "srcmobile": "images/img-83-m.jpg",
   "title": "UNTITLED 83",
   "year": "2016",
   "type": "collage",
@@ -397,6 +441,7 @@ var data = [{
 {
   "id": 45,
   "src": "images/img-84.jpg",
+  "srcmobile": "images/img-84-m.jpg",
   "title": "UNTITLED 84",
   "year": "2017",
   "type": "collage",
@@ -406,6 +451,7 @@ var data = [{
 {
   "id": 46,
   "src": "images/img-85.jpg",
+  "srcmobile": "images/img-85-m.jpg",
   "title": "UNTITLED 85",
   "year": "2017",
   "type": "collage",
@@ -415,6 +461,7 @@ var data = [{
 {
   "id": 47,
   "src": "images/img-86.jpg",
+  "srcmobile": "images/img-86-m.jpg",
   "title": "UNTITLED 86",
   "year": "2017",
   "type": "collage",
@@ -424,6 +471,7 @@ var data = [{
 {
   "id": 48,
   "src": "images/img-87.jpg",
+  "srcmobile": "images/img-87-m.jpg",
   "title": "UNTITLED 87",
   "year": "2017",
   "type": "collage",
@@ -433,6 +481,7 @@ var data = [{
 {
   "id": 49,
   "src": "images/img-88.jpg",
+  "srcmobile": "images/img-88-m.jpg",
   "title": "UNTITLED 88",
   "year": "2017",
   "type": "collage",
@@ -442,6 +491,7 @@ var data = [{
 {
   "id": 50,
   "src": "images/img-89.jpg",
+  "srcmobile": "images/img-89-m.jpg",
   "title": "UNTITLED 89",
   "year": "2017",
   "type": "collage",
@@ -451,6 +501,7 @@ var data = [{
 {
   "id": 51,
   "src": "images/img-90.jpg",
+  "srcmobile": "images/img-90-m.jpg",
   "title": "UNTITLED 90",
   "year": "2017",
   "type": "collage",
@@ -460,6 +511,7 @@ var data = [{
 {
   "id": 52,
   "src": "images/img-94.jpg",
+  "srcmobile": "images/img-94-m.jpg",
   "title": "UNTITLED 94",
   "year": "2015",
   "type": "collage",
@@ -469,6 +521,7 @@ var data = [{
 {
   "id": 53,
   "src": "images/img-soleilendommage.jpg",
+  "srcmobile": "images/img-soleilendommage-m.jpg",
   "title": "SOLEIL ENDOMMAGÉ",
   "year": "2017",
   "type": "collage",
@@ -478,6 +531,7 @@ var data = [{
 {
   "id": 54,
   "src": "images/img-lesignaldelhommeseul.jpg",
+  "srcmobile": "images/img-lesignaldelhommeseul-m.jpg",
   "title": "LE SIGNAL DE L'HOMME SEUL",
   "year": "2017",
   "type": "collage",
@@ -487,6 +541,7 @@ var data = [{
 {
   "id": 55,
   "src": "images/img-glamouretmort.jpg",
+  "srcmobile": "images/img-glamouretmort-m.jpg",
   "title": "GLAMOUR ET MORT",
   "year": "2017",
   "type": "collage",
@@ -496,6 +551,7 @@ var data = [{
 {
   "id": 56,
   "src": "images/img-letheatreduchaman.jpg",
+  "srcmobile": "images/img-letheatreduchaman-m.jpg",
   "title": "LE THÉÂTRE DU CHAMAN",
   "year": "2017",
   "type": "collage",
@@ -505,6 +561,7 @@ var data = [{
 {
   "id": 57,
   "src": "images/img-morceauxdeglaceetdecharbon.jpg",
+  "srcmobile": "images/img-morceauxdeglaceetdecharbon-m.jpg",
   "title": "MORCEAUX DE GLACE ET DE CHARBON",
   "year": "2017",
   "type": "collage",
@@ -514,6 +571,7 @@ var data = [{
 {
   "id": 58,
   "src": "images/img-latisserie.jpg",
+  "srcmobile": "images/img-latisserie-m.jpg",
   "title": "LA TISSERIE",
   "year": "2017",
   "type": "collage",
@@ -523,6 +581,7 @@ var data = [{
 {
   "id": 59,
   "src": "images/img-alambicpourlesthes.jpg",
+  "srcmobile": "images/img-alambicpourlesthes-m.jpg",
   "title": "ALAMBIC POUR LES THÉS",
   "year": "2017",
   "type": "collage",
@@ -532,6 +591,7 @@ var data = [{
 {
   "id": 60,
   "src": "images/img-91.jpg",
+  "srcmobile": "images/img-91-m.jpg",
   "title": "UNTITLED 91",
   "year": "2017",
   "type": "collage",
@@ -541,6 +601,7 @@ var data = [{
 {
   "id": 61,
   "src": "images/img-rebondissements.jpg",
+  "srcmobile": "images/img-rebondissements-m.jpg",
   "title": "REBONDISSEMENTS",
   "year": "2018",
   "type": "collage",
@@ -550,6 +611,7 @@ var data = [{
 {
   "id": 62,
   "src": "images/img-jambesroyales.jpg",
+  "srcmobile": "images/img-jambesroyales-m.jpg",
   "title": "JAMBES ROYALES",
   "year": "2018",
   "type": "collage",
@@ -559,6 +621,7 @@ var data = [{
 {
   "id": 63,
   "src": "images/img-vaguesaberrantes.jpg",
+  "srcmobile": "images/img-vaguesaberrantes-m.jpg",
   "title": "VAGUES ABERRANTES",
   "year": "2018",
   "type": "collage",
@@ -568,6 +631,7 @@ var data = [{
 {
   "id": 64,
   "src": "images/img-92.jpg",
+  "srcmobile": "images/img-92-m.jpg",
   "title": "UNTITLED 92",
   "year": "2018",
   "type": "collage",
@@ -577,6 +641,7 @@ var data = [{
 {
   "id": 65,
   "src": "images/img-lapropagationdescristaux.jpg",
+  "srcmobile": "images/img-lapropagationdescristaux-m.jpg",
   "title": "LA PROPAGATION DES CRISTAUX",
   "year": "2018",
   "type": "collage",
@@ -586,6 +651,7 @@ var data = [{
 {
   "id": 66,
   "src": "images/img-tueslestous.jpg",
+  "srcmobile": "images/img-tueslestous-m.jpg",
   "title": "TUEZ-LES TOUS",
   "year": "2018",
   "type": "assemblage",
@@ -595,6 +661,7 @@ var data = [{
 {
   "id": 67,
   "src": "images/img-leplongeondelasirene.jpg",
+  "srcmobile": "images/img-leplongeondelasirene-m.jpg",
   "title": "LE PLONGEON DE LA SIRÈNE",
   "year": "2018",
   "type": "collage",
@@ -604,6 +671,7 @@ var data = [{
 {
   "id": 68,
   "src": "images/img-soleilsurmarecage.jpg",
+  "srcmobile": "images/img-soleilsurmarecage-m.jpg",
   "title": "SOLEIL SUR MARÉCAGE",
   "year": "2018",
   "type": "collage",
@@ -613,9 +681,19 @@ var data = [{
 {
   "id": 69,
   "src": "images/img-lamachoiredelabaleine.jpg",
+  "srcmobile": "images/img-lamachoiredelabaleine-m.jpg",
   "title": "LA MÂCHOIRE DE LA BALEINE",
   "year": "2018",
   "type": "collage",
   "place": "Paris",
-  "dimensions" : "43 x 33 cm (17 x 13 in)",
+  "dimensions" : "43 x 33 cm (17 x 13 in)",},
+{
+  "id": 70,
+  "src": "images/img-cieldavril.jpg",
+  "srcmobile": "images/img-cieldavril-m.jpg",
+  "title": "CIEL D'AVRIL",
+  "year": "2020",
+  "type": "collage",
+  "place": "Bozel",
+  "dimensions" : "66 x 38 cm (26 x 15 in)",
 }]

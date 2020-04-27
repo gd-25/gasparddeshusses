@@ -2,30 +2,34 @@
 var breakpoint = 1100;
 var windowwidth = window.innerWidth;
 
-
-
+/* ------------------------------------------------------------------------------------- */
 /* ------------------------ SCRIPT TO RUN ON A COMPUTER ONLY ------------------------ */
+/* ------------------------------------------------------------------------------------- */
 
 if (windowwidth > breakpoint) {
   var randomNum = 0;
   var norm = 1;
-  var z = 5;
+  var z = 0;
+
 
   /* Display loader until page ready (with min 3s of display) */
   window.addEventListener("load", function () {
     setTimeout(() => {
-      document.querySelector("#loader").style.display = "none";
-      document.querySelector("#collagescontainer").style.display = "flex";
-    }, 3000);
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myNormalDisplay").style.display = "flex";
+      document.getElementById("myCollageContainer").style.display = "flex";
+      document.getElementById("myLogo").style.display = "block";
+      init();
+    }, 1000);
   });
 
-  function unlockDoor() {
-    document.getElementById("myCollageContainer").setAttribute("onclick", "switchMode(); resize();");
-    document.getElementById("myCollage").setAttribute("onmouseout", "triggerCoord();");
-  }
-
-  function triggerCoord() {
-    document.querySelector("#myCollageContainer").setAttribute("onmousemove", "getCoordinates(event);"); 
+  /* Display the most recent artwork on load */
+  function init() {
+    var recent = data.length - 1;
+    document.getElementById("myCollage").src = data[recent].src;
+    document.getElementById("line1").innerHTML = data[recent].title;
+    document.getElementById("line2").innerHTML = data[recent].year + ", " + data[recent].type + ", " + data[recent].place;
+    document.getElementById("line3").innerHTML = data[recent].dimensions;
   }
 
   /* Preload all images so the website is fully functional */
@@ -108,6 +112,17 @@ if (windowwidth > breakpoint) {
     "images/img-vaguesaberrantes.jpg"
   )
 
+  /* Choose the collage and the matching info based on the same random number */
+  function chooseCollage(number) {
+    document.getElementById("myCollage").src = data[number].src;
+    document.getElementById("myCollagePreview").src = data[number].src;
+    document.getElementById("line1").innerHTML = data[number].title;
+    document.getElementById("line2").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
+    document.getElementById("line3").innerHTML = data[number].dimensions;
+    document.getElementById("line1Preview").innerHTML = data[number].title;
+    document.getElementById("line2Preview").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
+    document.getElementById("line3Preview").innerHTML = data[number].dimensions;
+  }
 
   /* Get the coordinates and calculate z */
   function getCoordinates(e) {
@@ -122,7 +137,7 @@ if (windowwidth > breakpoint) {
   function changeCollage(norm, randomnumber) {
     z = z + norm;
 
-    if (z > 6) {
+    if (z > 8) {
       z = 0;
       chooseCollage(randomnumber)
       resize()
@@ -141,37 +156,138 @@ if (windowwidth > breakpoint) {
     });
   }
 
-  /* Choose the collage and the matching info based on the same random number */
-  function chooseCollage(number) {
-    document.getElementById("myCollage").style.height = "500px";
-    document.getElementById("myCollage").src = data[number].src;
-    document.getElementById("myBio").style.display = "none";
-    document.getElementById("social").style.display = "none";
-    document.getElementById("myCollageInfo").style.display = "flex";
-    document.getElementById("line1").innerHTML = data[number].title;
-    document.getElementById("line2").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
-    document.getElementById("line3").innerHTML = data[number].dimensions;
-  }
-
-
   /* Move between the collage mode and the info mode */
   function switchMode() {
-    var jooo = document.getElementById("myInfo").style.display;
+    var jooo = document.getElementById("myCollageContainer").style.display;
 
-    if (jooo == "none") {
+    if (jooo == "flex") {
       document.getElementById("myCollageContainer").style.display = "none";
-      document.getElementById("myInfo").style.display = "flex";
+      document.getElementById("myCollageInfo").style.display = "flex";
     }
     else {
-      document.getElementById("myInfo").style.display = "none";
+      document.getElementById("myCollageInfo").style.display = "none";
       document.getElementById("myCollageContainer").style.display = "flex";
     }
   }
+
+  /* Hide and show elements when needed */
+  function vanish(id) {
+    document.getElementById(id).style.opacity = "0";
+  }
+  function coucou(id) {
+    document.getElementById(id).style.opacity = "1";
+  }
+
+  /* Go to the website's different rooms */
+  function goToSas() {
+    document.getElementById("myNormalDisplay").style.display = "none";
+    document.getElementById("mySas").style.display = "flex";
+  }
+  function goToBio() {
+    document.getElementById("mySas").style.display = "none";
+    document.getElementById("myLogo").style.display = "none";
+    document.getElementById("myBio").style.display = "flex";
+  }
+  function goToOverview() {
+    document.getElementById("mySas").style.display = "none";
+    document.getElementById("myLogo").style.display = "none";
+    document.getElementById("myOverview").style.display = "flex";
+  }
+  function goToDetails(number) {
+    document.getElementById("myLogo").style.display = "none";
+    chooseCollage(number);
+    document.getElementById("myOverview").style.display = "none";
+    document.getElementById("myDetailedPreview").style.display = "flex";
+  }
+
+  /* Go backwards to the website's different rooms */
+  function goBackToNormal() {
+    document.getElementById("mySas").style.display = "none";
+    document.getElementById("myLogo").style.display = "block";
+    document.getElementById("myNormalDisplay").style.display = "flex";
+  }
+  function goBackToSas() {
+    if (document.getElementById("myOverview").style.display == "flex") {
+      document.getElementById("myOverview").style.display = "none";
+      document.getElementById("mySas").style.display = "flex";
+    }
+    else {
+      document.getElementById("myBio").style.display = "none";
+      document.getElementById("mySas").style.display = "flex";
+      document.getElementById("myLogo").style.display = "block";
+    }
+  }
+  function goBackToPreview() {
+    document.getElementById("myDetailedPreview").style.display = "none";
+    document.getElementById("myOverview").style.display = "flex";
+    $('.staythere').css('opacity', '1');
+  }
+
+
+  /* Set up the clicks to enable the "click outside to go back" UX */
+  function clickInsideSas() {
+    document.getElementById("myInformationButton").setAttribute("onclick", "goToBio();");
+    document.getElementById("myOverviewButton").setAttribute("onclick", "goToOverview();");
+    document.getElementById("mySas").removeAttribute("onclick", "goBackToNormal();");
+  }
+  function clickOutsideSas() {
+    document.getElementById("myInformationButton").removeAttribute("onclick", "goToBio();");
+    document.getElementById("myOverviewButton").removeAttribute("onclick", "goToOverview();");
+    document.getElementById("mySas").setAttribute("onclick", "goBackToNormal();");
+  }
+  function clickInsideBio() {
+    document.getElementById("myBio").removeAttribute("onclick", "goBackToSas();");
+  }
+  function clickOutsideBio() {
+    document.getElementById("myBio").setAttribute("onclick", "goBackToSas();");
+  }
+  function clickInside(number) {
+    if (document.getElementById("myOverview").style.display == "flex") {
+      document.getElementById("myOverview").removeAttribute("onclick", "goBackToSas()");
+      document.getElementById("collage" + number).style.opacity = "0";
+      document.getElementById("collage" + number).setAttribute("onclick", "goToDetails(" + number + ")");
+    }
+    else if (document.getElementById("myCollageContainerPreview").style.display == "flex") {
+      document.getElementById("myDetailedPreview").removeAttribute("onclick", "goBackToPreview(" + number + ")");
+      document.getElementById("myCollagePreview").setAttribute("onclick", "switchModePreview(); resize();");
+    }
+    else if (document.getElementById("myCollageInfoPreview").style.display == "flex") {
+      document.getElementById("myDetailedPreview").removeAttribute("onclick", "goBackToPreview(" + number + ")");
+      document.getElementById("myCollageInfoPreview").setAttribute("onclick", "switchModePreview();");
+    }
+
+  }
+  function clickOutside(number) {
+    if (document.getElementById("myOverview").style.display == "flex") {
+      document.getElementById("myOverview").setAttribute("onclick", "goBackToSas()");
+      document.getElementById("collage" + number).style.opacity = "1";
+    }
+    else {
+      document.getElementById("myDetailedPreview").setAttribute("onclick", "goBackToPreview(" + number + ")");
+    }
+  }
+
+  /* Move between the collage mode and the info mode on the Preview section */
+  function switchModePreview() {
+    var jooo = document.getElementById("myCollageInfoPreview").style.display;
+
+    if (jooo == "none") {
+      document.getElementById("myCollageContainerPreview").style.display = "none";
+      document.getElementById("myCollageInfoPreview").style.display = "flex";
+    }
+    else {
+      document.getElementById("myCollageInfoPreview").style.display = "none";
+      document.getElementById("myCollageContainerPreview").style.display = "flex";
+    }
+  }
+
 }
 
 
-
+/* ------------------------------------------------------------------------------------- */
 /* ------------------------ SCRIPT TO RUN ON SMALL SCREENS ONLY ------------------------ */
+/* ------------------------------------------------------------------------------------- */
+
 else {
 
 
@@ -182,29 +298,12 @@ else {
       document.getElementById("logomobile").style.display = "flex";
       document.getElementById("collagescontainermobile").style.display = "flex";
       document.getElementById("endsocial").style.display = "flex";
-    }, 3000);
+    }, 1000);
   });
-
-  /* Create a random array to display collages randomly */
-  function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array;
-  }
 
   /* Switch between collage mode and info mode on mobile */
   function switchStateMobile(number) {
-    var collage = document.getElementById("collage" + number);
+    var collage = document.getElementById("collagemobile" + number);
     var outside = document.getElementById("newInfo" + number);
     var collageHeight = collage.offsetHeight;
 
@@ -255,10 +354,6 @@ else {
   }
 
 };
-
-
-
-
 
 
 
