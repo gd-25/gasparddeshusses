@@ -123,6 +123,12 @@ if (windowwidth > breakpoint) {
     document.getElementById("line2Preview").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
     document.getElementById("line3Preview").innerHTML = data[number].dimensions;
   }
+  function chooseCollagePreview(number) {
+    document.getElementById("myCollagePreview").src = data[number].src;
+    document.getElementById("line1Preview").innerHTML = data[number].title;
+    document.getElementById("line2Preview").innerHTML = data[number].year + ", " + data[number].type + ", " + data[number].place;
+    document.getElementById("line3Preview").innerHTML = data[number].dimensions;
+  }
 
   /* Get the coordinates and calculate z */
   function getCoordinates(e) {
@@ -195,7 +201,7 @@ if (windowwidth > breakpoint) {
   }
   function goToDetails(number) {
     document.getElementById("myLogo").style.display = "none";
-    chooseCollage(number);
+    chooseCollagePreview(number);
     document.getElementById("myOverview").style.display = "none";
     document.getElementById("myDetailedPreview").style.display = "flex";
   }
@@ -205,6 +211,7 @@ if (windowwidth > breakpoint) {
     document.getElementById("mySas").style.display = "none";
     document.getElementById("myLogo").style.display = "block";
     document.getElementById("myNormalDisplay").style.display = "flex";
+    resize();
   }
   function goBackToSas() {
     if (document.getElementById("myOverview").style.display == "flex") {
@@ -289,7 +296,15 @@ if (windowwidth > breakpoint) {
 /* ------------------------------------------------------------------------------------- */
 
 else {
-
+  
+  /* 100vh doesn't work on mobiles */
+  window.onload = function correctHeight() {
+    var fullHeightMobile = window.innerHeight;
+    document.getElementById("loadermobile").style.height = fullHeightMobile + "px";
+    document.getElementById("loaderimage").style.opacity = "1";
+    document.getElementById("logomobile").style.height = fullHeightMobile + "px";
+    addEventListener('orientationchange', correctHeight)
+  }
 
   /* Display loader until page ready */
   window.addEventListener("load", function () {
@@ -298,7 +313,7 @@ else {
       document.getElementById("logomobile").style.display = "flex";
       document.getElementById("collagescontainermobile").style.display = "flex";
       document.getElementById("endsocial").style.display = "flex";
-    }, 1000);
+    }, 1500);
   });
 
   /* Switch between collage mode and info mode on mobile */
